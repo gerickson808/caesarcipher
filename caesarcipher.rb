@@ -29,7 +29,10 @@ phrase = phrase.split("").map do |letter|
 			if lowercase == true then letter += 26 elsif capital == true then letter -= 26 end
 		end
 		if letter <65 && capital == true then letter += 26 end
+
+		#For some reason spaces keep changing to colons, this next line just puts them back	
 		if letter == 58 then letter = 32 end
+			
 		letter = letter.chr
 end.join
 puts phrase
